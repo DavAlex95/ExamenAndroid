@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ExamenAndroid</string>
+    <string name="title_home">Peliculas</string>
+    <string name="title_dashboard">GPS</string>
+    <string name="title_notifications">Fotos</string>
+    <string name="charge_img">CARGAR IMAGEN</string>
+    <string name="create_button_tittle">CARGAR</string>
+    <string name="close_button_tittle">CERRAR</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="txtExitDialog">Salir</string>
+</resources>
