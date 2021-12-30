@@ -10,13 +10,6 @@
         android:scaleType="centerCrop"
         android:layout_gravity="center"/>
 
-    <Button
-        android:id="@+id/setWallpaperBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Set as wallpaper"
-        android:layout_gravity="bottom"/>
-
     <ProgressBar
         android:id="@+id/dialogProgressBar"
         android:layout_width="50dp"
