@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.dafs.examenandroid.ui.home.HomeFragment"
+        android:name="com.dafs.examenandroid.ui.home.MovieFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_movie_list" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
