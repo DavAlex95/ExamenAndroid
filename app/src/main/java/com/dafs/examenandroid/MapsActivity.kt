@@ -3,6 +3,7 @@ package com.dafs.examenandroid
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.FragmentActivity
 import com.dafs.examenandroid.adapters.LocationsAdapter
 
 import com.dafs.examenandroid.databinding.ActivityMapsBinding
@@ -52,6 +53,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             .get()
             .addOnSuccessListener { result ->
 
+                if(result.size()>0){
+
+
+
                 for (document in result) {
 
                     val date:String=document.get("fecha").toString()
@@ -82,10 +87,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 val bounds = builder.build()
                 val cameraUpdate = CameraUpdateFactory.newLatLngBounds(bounds, 50)
                 mMap.animateCamera(cameraUpdate)
+                }
+                else{
+                    CustomDialogFragment("No existe ninguna locación en la base de Datos de Firebase").show(supportFragmentManager,"customDialog");
 
+                }
 
             }
             .addOnFailureListener { exception ->
+                CustomDialogFragment(exception.toString()).show(supportFragmentManager,"customDialog");
                 Log.w("LocationsSearch", "Error getting documents.", exception)
             }
 
